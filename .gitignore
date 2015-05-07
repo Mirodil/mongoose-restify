@@ -1,0 +1,13 @@
+*.user
+*.suo
+*.pubxml
+Thumbs.db
+*.vspscc
+*.dat
+*.njsproj
+*.sln
+bin/
+obj/
+TestResults/
+PublishProfiles/
+node_modules
