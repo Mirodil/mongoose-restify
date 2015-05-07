@@ -1,7 +1,7 @@
 {
     "name": "mongo-restify",
     "version": "0.0.1",
-    "description": "Restify mongo collections",    
+    "description": "Restify mongo collections",
     "keywords": [
         "mongo-restfy",
         "mongo",
@@ -26,6 +26,9 @@
     },
     "readmeFilename": "README.md",
     "main": "index.js",
+    "engines": {
+        "node": ">=0.11.0"
+    },
     "directories": {
         "test": "mocha tests"
     },
