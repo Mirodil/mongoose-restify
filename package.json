@@ -1,28 +1,41 @@
 {
-  "name": "mongo-restify",
-  "version": "0.0.1",
-  "author": "Mirodil",
-  "license": "MIT",
-  "description": "Restify mongo collections",
-  "main": "index.js",
-  "directories": {
-	"test": "tests"
-  },
-  "scripts": {
-	"test": "mocha *"
-  },
-  "keywords": [
-	"mongo-restfy",
-	"mongo",
-	"restful"
-  ],
-  "dependencies":{
-	"lodash": "*",
-	"bluebird": "*"
-  },
-  "devDependencies":{
-	"mongoose": "*",
-	"should": "*",
-	"supertest": "*"
-  }
+    "name": "mongo-restify",
+    "version": "0.0.1",
+    "description": "Restify mongo collections",    
+    "keywords": [
+        "mongo-restfy",
+        "mongo",
+        "restful"
+    ],
+    "scripts": {
+        "test": "mocha *"
+    },
+    "homepage": "https://github.com/mirodil/mongo-restify",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/mirodil/mongo-restify.git"
+    },
+    "bugs": {
+        "url": "https://github.com/mirodil/mongo-restify/issues"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Mirodil",
+        "email": "mirodil007@gmail.com",
+        "url": "https://github.com/Mirodil"
+    },
+    "readmeFilename": "README.md",
+    "main": "index.js",
+    "directories": {
+        "test": "mocha tests"
+    },
+    "dependencies": {
+        "lodash": "*",
+        "bluebird": "*"
+    },
+    "devDependencies": {
+        "mongoose": "*",
+        "should": "*",
+        "supertest": "*"
+    }
 }
