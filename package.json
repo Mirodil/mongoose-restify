@@ -39,6 +39,7 @@
   "devDependencies": {
     "mongoose": "*",
     "should": "*",
+    "mocha": "*",
     "supertest": "*"
   }
 }
