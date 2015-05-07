@@ -5,3 +5,8 @@ node_js:
   - "0.11"
   - "iojs"
   - "iojs-v1.0.4" 
+before_script:
+  - sleep 15
+  - mongo mongorestify_test --eval 'db.addUser("mongorestify", "mongorestify");'
+services:
+  - mongodb
