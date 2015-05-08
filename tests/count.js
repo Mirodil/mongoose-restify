@@ -29,7 +29,7 @@ describe('COUNT', function () {
     });
     
     it('should be count 2', function (done) {
-        var query = 'q[developer]=Nintendo';
+        var query = 'query[developer]=Nintendo';
         request(app)
         .get('/api/games/count?'+ query)
         .expect(200)
@@ -40,7 +40,7 @@ describe('COUNT', function () {
     });
     
     it('should be count 1', function (done) {
-        var query = 'q[developer]=Rare';
+        var query = 'query[developer]=Rare';
         request(app)
         .get('/api/games/count?' + query)
         .expect(200)
