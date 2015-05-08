@@ -35,13 +35,25 @@ describe( 'SELECT', function () {
     });
     
     it('with query', function (done) {
-        var query = 'q[developer]=Nintendo';
+        var query = 'query[developer]=Nintendo';
         request(app)
         .get('/api/games?'+ query)
         .expect(200)
         .expect(function (res) {
             res.body.should.be.array;
             (res.body.length > 0).should.be.ok;
+        })
+        .end(done);
+    });
+
+    it('with free search', function (done) {
+        var query = 'q=hello';
+        request(app)
+        .get('/api/games?' + query)
+        .expect(200)
+        .expect(function (res) {
+            res.body.should.be.array;
+            (res.body.length === 0).should.be.ok;
         })
         .end(done);
     });

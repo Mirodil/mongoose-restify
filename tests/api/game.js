@@ -5,7 +5,8 @@ var Game = require('./model');
 
 var gameApi = new Restfy({
     path: '/games',
-    model: Game
+    model: Game,
+    qFields: ['developer']
 });
 
 
