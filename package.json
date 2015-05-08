@@ -34,10 +34,11 @@
   },
   "dependencies": {
     "bluebird": "*",
-    "lodash": "^3.8.0"
+    "lodash": "^3.8.0",
+    "mongoose": "^4.0.2"
   },
   "devDependencies": {
-    "mongoose": "*",
+    "mongoose": "^4.0.2",
     "should": "*",
     "mocha": "*",
     "express": "4.2.0",
