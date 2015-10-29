@@ -1,5 +1,5 @@
 {
-  "name": "mongo-restify",
+  "name": "mongoose-restify",
   "version": "0.0.8",
   "description": "Restify mongo collections",
   "keywords": [
@@ -10,13 +10,13 @@
   "scripts": {
     "test": "mocha tests"
   },
-  "homepage": "https://github.com/mirodil/mongo-restify",
+  "homepage": "https://github.com/Mirodil/mongoose-restify",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mirodil/mongo-restify.git"
+    "url": "git://github.com/mirodil/mongoose-restify.git"
   },
   "bugs": {
-    "url": "https://github.com/mirodil/mongo-restify/issues"
+    "url": "https://github.com/Mirodil/mongoose-restify/issues"
   },
   "license": "MIT",
   "author": {
@@ -27,25 +27,24 @@
   "readmeFilename": "README.md",
   "main": "index.js",
   "engines": {
-    "node": ">=0.11.0"
+    "node": ">=4.0.0"
   },
   "directories": {
     "test": "mocha tests"
   },
   "dependencies": {
     "bluebird": "*",
-    "lodash": "^3.8.0",
-    "mongoose": "^4.0.2"
+    "lodash": "*"
   },
   "devDependencies": {
-    "mongoose": "^4.0.2",
+    "mongoose": "*",
     "should": "*",
     "mocha": "*",
-    "express": "4.2.0",
-    "body-parser": "1.0.2",
-    "cookie-parser": "1.0.1",
-    "debug": "0.7.4",
-    "morgan": "1.0.1",
+    "express": "*",
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "debug": "*",
+    "morgan": "*",
     "supertest": "*"
   }
 }

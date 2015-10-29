@@ -1,1 +1,1 @@
-module.exports = require('./lib/restful');
+module.exports = require('./lib/api');
