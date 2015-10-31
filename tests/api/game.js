@@ -80,7 +80,7 @@ class GameAPI extends API {
 	/**
 	 * request end but before send response
 	 */
-    onAfterCreate(req, doc, numAffected, next) {
+    onAfterCreate(req, doc, next) {
         next(null, doc);
     }
 	
@@ -94,7 +94,7 @@ class GameAPI extends API {
 	/**
 	 * request end but before send response
 	 */
-    onAfterUpdate(req, doc, numAffected, next) {
+    onAfterUpdate(req, doc, next) {
         next(null, doc);
     }
 	
@@ -108,7 +108,7 @@ class GameAPI extends API {
 	/**
 	 * request end but before send response
 	 */
-    onAfterPartialUpdate(req, doc, next) {
+    onAfterPartialUpdate(req, doc, numAffected, next) {
         next(null, doc);
     }
 	

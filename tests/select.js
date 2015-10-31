@@ -4,7 +4,6 @@
 var request = require( 'supertest' );
 var express = require( 'express' );
 var should = require( 'should' );
-var Promise = require( 'bluebird' );
 
 var app = require( './api/app' );
 var generation = require( './api/generation' );
@@ -28,7 +27,7 @@ describe( 'SELECT', function () {
         .get( '/api/games' )
         .expect( 200 )
         .expect(function (res) {
-            res.body.should.be.array;
+            res.body.should.be.Array();
             (res.body.length > 0).should.be.ok;            
         } )
         .end( done );
@@ -40,7 +39,7 @@ describe( 'SELECT', function () {
         .get('/api/games?'+ query)
         .expect(200)
         .expect(function (res) {
-            res.body.should.be.array;
+            res.body.should.be.Array();
             (res.body.length > 0).should.be.ok;
         })
         .end(done);
@@ -52,7 +51,7 @@ describe( 'SELECT', function () {
         .get('/api/games?' + query)
         .expect(200)
         .expect(function (res) {
-            res.body.should.be.array;
+            res.body.should.be.Array();
             (res.body.length === 0).should.be.ok;
         })
         .end(done);
@@ -64,7 +63,7 @@ describe( 'SELECT', function () {
         .get('/api/games?' + query)
         .expect(200)
         .expect(function (res) {
-            res.body.should.be.array;
+            res.body.should.be.Array();
             (res.body.length === 1).should.be.ok;
         })
         .end(done);
@@ -76,7 +75,7 @@ describe( 'SELECT', function () {
         .get('/api/games?' + query)
         .expect(200)
         .expect(function (res) {
-            res.body.should.be.array;
+            res.body.should.be.Array();
             (res.body.length > 0).should.be.ok;
         })
         .end(done);
@@ -88,7 +87,7 @@ describe( 'SELECT', function () {
         .get('/api/games?' + query)
         .expect(200)
         .expect(function (res) {
-            res.body.should.be.array;
+            res.body.should.be.Array();
             (res.body.length > 0).should.be.ok;
         })
         .end(done);
@@ -100,7 +99,7 @@ describe( 'SELECT', function () {
         .get('/api/games?' + query)
         .expect(200)
         .expect(function (res) {
-            res.body.should.be.array;
+            res.body.should.be.Array();
             (res.body.length > 0).should.be.ok;
             res.body[0].should.have.properties('name', 'developer');
             console.log(res.body[0]);

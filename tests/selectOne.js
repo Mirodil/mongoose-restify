@@ -4,7 +4,6 @@
 var request = require('supertest');
 var express = require('express');
 var should = require('should');
-var Promise = require('bluebird');
 
 var app = require('./api/app');
 var generation = require('./api/generation');
@@ -23,7 +22,7 @@ describe('SELECT ONE', function () {
         .get('/api/games?fields=_id')
         .expect(200)
         .expect(function (res) {
-            res.body.should.be.array;
+            res.body.should.be.Array();
             (res.body.length > 0).should.be.ok;
             data = res.body;
         })
@@ -42,7 +41,7 @@ describe('SELECT ONE', function () {
         .get('/api/games/'+ data[0]._id)
         .expect(200)
         .expect(function (res) { 
-            res.body.should.be.an.Object.and.have.property('_id');
+            res.body.should.be.an.Object().and.have.property('_id');
         })
         .end(done);
     });

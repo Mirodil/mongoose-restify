@@ -4,7 +4,6 @@
 var request = require('supertest');
 var express = require('express');
 var should = require('should');
-var Promise = require('bluebird');
 
 var app = require('./api/app');
 var generation = require('./api/generation');
@@ -46,7 +45,7 @@ describe('PARTIAL UPDATE', function () {
         .get('/api/games/' + record._id)
         .expect(200)
         .expect(function (res) {
-            res.body.should.be.an.Object.and.have.property('name', 'hello world');
+            res.body.should.be.an.Object().and.have.property('name', 'hello world');
         })
         .end(done);
     });
@@ -70,7 +69,7 @@ describe('PARTIAL UPDATE', function () {
         .get('/api/games/' + record._id)
         .expect(200)
         .expect(function (res) {
-            res.body.should.be.an.Object.and.have.properties({
+            res.body.should.be.an.Object().and.have.properties({
                 name: record.name,
                 developer: record.developer,
                 released: record.released

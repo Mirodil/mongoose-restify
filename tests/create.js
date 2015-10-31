@@ -4,7 +4,6 @@
 var request = require('supertest');
 var express = require('express');
 var should = require('should');
-var Promise = require('bluebird');
 
 var app = require('./api/app');
 var generation = require('./api/generation');
@@ -28,7 +27,7 @@ describe('CREATE', function () {
         .send(data)
         .expect(201)
         .expect(function (res) {
-            res.body.should.be.an.Object.and.have.property('_id');
+            res.body.should.be.an.Object().and.have.property('_id');
             res.body.should.have.property('name', data.name);
             res.body.should.have.property('developer', data.developer);            
         })
