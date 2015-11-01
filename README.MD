@@ -43,7 +43,7 @@ class GameAPI extends API {
 	 *  onBeforeUpdate(req, doc, data, next) { next(null, doc, data); }
 	 *  onAfterUpdate(req, doc, numAffected, next) { next(null, doc); }
 	 *  onBeforePartialUpdate(req, doc, data, next) { next(null, doc, data); }
-	 *  onAfterPartialUpdate(req, doc, next) { next(null, doc); }
+	 *  onAfterPartialUpdate(req, doc, numAffected, next) { next(null, doc); }
 	 *  onBeforeDelete(req, doc, next) { next(null, doc); }
 	 *  onAfterDelete(req, doc, next) { next(null, doc); }
      *  onQueryPipe(req, queryPipe, next) { next(null, queryPipe); }
@@ -269,7 +269,7 @@ function (req, doc, numAffected, next) { next(null, doc); };
 function (req, doc, data, next) { next(null, doc, data); };
 
 ## onAfterPartialUpdate 
-function (req, doc, next) { next(null, doc); };
+function (req, doc, numAffected, next) { next(null, doc); };
 
 ## onBeforeDelete 
 function (req, doc, next) { next(null, doc); };
