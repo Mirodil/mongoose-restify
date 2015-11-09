@@ -1,6 +1,6 @@
 {
   "name": "mongoose-restify",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Restify mongo collections",
   "keywords": [
     "mongo-restfy",
@@ -32,7 +32,7 @@
   "directories": {
     "test": "mocha tests"
   },
-  "dependencies": {    
+  "dependencies": {
     "lodash": "*"
   },
   "devDependencies": {
