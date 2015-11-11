@@ -2,7 +2,7 @@
 
 Mongoose-Restify is a restify for mongodb collections though mongoose.
 
-[![Build Status](https://api.travis-ci.org/Mirodil/mongo-restify.svg?branch=master)](https://travis-ci.org/Mirodil/mongo-restify)
+[![Build Status](https://api.travis-ci.org/Mirodil/mongoose-restify.svg?branch=master)](https://travis-ci.org/Mirodil/mongoose-restify)
 
 # Use
 We can overide methods listed in #methods and attache to expressjs router
