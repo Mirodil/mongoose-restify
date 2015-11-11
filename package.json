@@ -1,6 +1,6 @@
 {
   "name": "mongoose-restify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Restify mongo collections",
   "keywords": [
     "mongo-restfy",
