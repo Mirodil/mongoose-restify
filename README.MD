@@ -142,21 +142,6 @@ Allowed mongo partial update operators.
 `$addToSet`, `$pop`, `$pullAll`, `$pull`, `$push` and `$bit` allowed by default 
 to overried those spesify this parameter as string array.
 
-## queryPipe
-Default query pipe. `queryPipe` should be function with query argument. You can use this option 
-to spesify default fields population.
-
-```js
-    
-    var api = new API({
-        path: '/comments',
-        model: Comment,
-        queryPipe: function (query) {
-            return query.populate('user', 'name avatar');
-        }
-    });
-```
-
 # Methods 
 
 The methods listed bellow are allowed to overide.
@@ -279,6 +264,17 @@ function (req, doc, next) { next(null, doc); };
 
 ## onQueryPipe 
 function (req, queryPipe, next) { next(null, queryPipe); };
+
+## queryPipe
+Default query pipe. `queryPipe` should be function with query argument. You can use this method 
+to spesify default population fields.
+
+```js
+    
+    queryPipe (query) {
+       return query.populate('user', 'name avatar');
+    }
+```
 
 ## onError
 ```

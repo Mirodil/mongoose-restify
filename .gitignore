@@ -12,3 +12,4 @@ obj/
 TestResults/
 PublishProfiles/
 node_modules
+.vscode/
